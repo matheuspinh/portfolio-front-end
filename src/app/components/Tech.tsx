@@ -1,15 +1,14 @@
 import React from 'react'
-import { motion } from 'framer-motion'
+import TypeScriptLogo from '../assets/Typescript_logo_2020.svg.png'
+import Image from 'next/image'
 
-type Props = {}
-
-function Tech({ }: Props) {
+function Tech() {
   return (
     <div className="group relative flex cursor-pointer">
-      <img
+      <Image
         width={100}
         height={100}
-        src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Typescript_logo_2020.svg/2048px-Typescript_logo_2020.svg.png"
+        src={TypeScriptLogo}
         alt="ts"
         className="aspect-square h-20 w-20 rounded-full border border-gray-300 object-cover filter transition duration-300 ease-in-out group-hover:grayscale md:h-24 md:w-24"
       />
