@@ -10,7 +10,7 @@ function CaseStudies() {
 
   return (
     <div className="relative mx-auto flex h-screen max-w-full snap-center flex-col items-center justify-evenly text-left md:flex-row">
-      <h1 className="z-4 absolute top-20 mr-[-20px] text-center text-2xl uppercase tracking-[20px] text-gray-400">
+      <h1 className="z-4 absolute top-10 mr-[-20px] text-center text-2xl uppercase tracking-[20px] text-gray-400">
         Case Studies
       </h1>
 
@@ -18,11 +18,11 @@ function CaseStudies() {
         initial={{ opacity: 0 }}
         transition={{ duration: 2 }}
         whileInView={{ opacity: 1 }}
-        className="relative z-20 flex w-full snap-x snap-mandatory overflow-y-hidden overflow-x-scroll scrollbar scrollbar-track-gray-400/20 scrollbar-thumb-red-50/70"
+        className="relative z-20 flex h-screen w-full snap-x snap-mandatory overflow-y-hidden overflow-x-scroll scrollbar scrollbar-track-gray-400/20 scrollbar-thumb-red-50/70"
       >
         {projects.map((project) => (
           <div key={project} id={`${project}`}>
-            <div className="flex h-screen w-screen flex-shrink-0 snap-center flex-col items-center justify-center space-y-5 p-20 md:p-44">
+            <div className="flex h-screen w-screen flex-shrink-0 snap-center flex-col items-center justify-center space-y-5 md:p-44">
               <motion.div
                 initial={{
                   y: -300,
@@ -34,13 +34,9 @@ function CaseStudies() {
                   y: 0,
                 }}
                 viewport={{ once: true }}
+                className="w-72 rounded-lg object-cover p-4 md:w-[540px]"
               >
-                <Image
-                  className="h-full rounded-lg object-cover md:w-[390px]"
-                  width={390}
-                  src={DinDinImage}
-                  alt="image"
-                />
+                <Image className="" width={540} src={DinDinImage} alt="image" />
               </motion.div>
 
               <motion.div
@@ -59,7 +55,7 @@ function CaseStudies() {
                 <h4 className="text-lg text-red-50">
                   Estudo de caso {project} de {projects.length}: DinDin
                 </h4>
-                <p className="overflow-y-auto text-gray-100">
+                <p className="overflow-y-auto text-justify text-gray-100">
                   Lorem ipsum dolor sit amet consectetur, adipisicing elit. Et
                   excepturi vel ratione quis ex tempore, doloribus dolorem ipsum
                   velit ipsam modi cupiditate eum aliquam vero dolorum

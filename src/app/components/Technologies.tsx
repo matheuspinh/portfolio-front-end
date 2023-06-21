@@ -45,7 +45,7 @@ const skillz = [
 function Technologies() {
   return (
     <div className="xl: relative mt-2 flex min-h-screen flex-col items-center justify-center text-center md:flex-row md:text-left xl:px-10">
-      <h1 className="absolute top-20 mr-[-20px] text-center text-2xl uppercase tracking-[20px] text-gray-400">
+      <h1 className="absolute top-10 mr-[-20px] text-center text-2xl uppercase tracking-[20px] text-gray-400">
         My Technologies
       </h1>
       <motion.div

@@ -8,7 +8,7 @@ import Image from 'next/image'
 function About() {
   return (
     <div className="relative flex h-screen flex-col items-center justify-center p-6 text-center md:flex-row md:text-left">
-      <h1 className="absolute top-20 mr-[-20px] text-center text-2xl uppercase tracking-[20px] text-gray-400">
+      <h1 className="absolute top-10 mr-[-20px] text-center text-2xl uppercase tracking-[20px] text-gray-400">
         About
       </h1>
       <motion.div
@@ -20,7 +20,7 @@ function About() {
           duration: 1.2,
         }}
         whileInView={{ opacity: 1, x: 0 }}
-        className="aspect-square h-60"
+        className="aspect-square h-32 md:h-72"
       >
         <Image src={AboutAvatar} alt="About Image" className="rounded-full" />
       </motion.div>
