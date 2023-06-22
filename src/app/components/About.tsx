@@ -12,7 +12,7 @@ type data = {
 function About({ data }: data) {
   return (
     <div className="relative flex h-screen flex-col items-center justify-center p-6 text-center md:flex-row md:text-left">
-      <h1 className="absolute top-10 mr-[-20px] text-center text-2xl uppercase tracking-[20px] text-gray-400">
+      <h1 className="absolute top-10 mr-[-20px] text-center text-xl uppercase tracking-[20px] text-gray-300 md:text-2xl">
         About
       </h1>
       <motion.div

@@ -1,5 +1,6 @@
 import About from './components/About'
 import CaseStudies from './components/CaseStudies'
+import Header from './components/Header'
 import Hero from './components/Hero'
 import Technologies from './components/Technologies'
 import { PageData } from './types/page-info'
@@ -32,8 +33,12 @@ export default async function Home() {
 
   return (
     <main className="h-screen snap-y snap-mandatory overflow-x-hidden font-sans scrollbar scrollbar-track-gray-400/20 scrollbar-thumb-red-50/70">
+      <section className="sticky top-0 flex w-screen justify-center">
+        <Header />
+      </section>
+
       {/* Hero */}
-      <section id="Hero" className="snap-start">
+      <section id="Hero" className="snap-center">
         <Hero data={data} />
       </section>
       {/* About */}

@@ -57,7 +57,7 @@ function Hero({ data }: data) {
           <span>{mainText}</span>
           <Cursor cursorStyle={'▋'} />
         </h1>
-        <div className="flex items-center justify-center text-sm text-gray-400">
+        <div className="flex items-center justify-center text-sm text-gray-300">
           <Link href="#about">
             <button className="mx-2 hover:text-red-50">About</button>
           </Link>
