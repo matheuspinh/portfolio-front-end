@@ -67,9 +67,9 @@ function Hero({ data }: data) {
           <Link href="#technologies">
             <button className="mx-2 hover:text-red-50">My Technologies</button>
           </Link>
-          <Link href="#contact">
+          {/* <Link href="#contact">
             <button className="mx-2 hover:text-red-50">Contact Me</button>
-          </Link>
+          </Link> */}
         </div>
       </div>
     </motion.div>
