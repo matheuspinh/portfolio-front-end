@@ -41,7 +41,7 @@ function CaseStudies({ data }: data) {
                 className="w-72 rounded-lg object-cover p-4 md:w-[540px]"
               >
                 <Image
-                  className=""
+                  className="rounded-lg"
                   height={280}
                   width={540}
                   src={`${project.projectPic.url}`}
