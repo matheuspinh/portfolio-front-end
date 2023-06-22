@@ -3,7 +3,7 @@ import { SocialIcon } from 'react-social-icons'
 
 function Header() {
   return (
-    <div className="z-20 flex w-full max-w-7xl items-center justify-between object-cover px-4">
+    <div className="flex w-full max-w-7xl items-center justify-between object-cover px-4">
       <div>
         <SocialIcon
           fgColor="gray"

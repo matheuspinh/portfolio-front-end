@@ -33,7 +33,7 @@ export default async function Home() {
 
   return (
     <main className="h-screen snap-y snap-mandatory overflow-x-hidden font-sans scrollbar scrollbar-track-gray-400/20 scrollbar-thumb-red-50/70">
-      <section className="sticky top-0 flex w-screen justify-center">
+      <section className="sticky top-0 z-20 flex w-screen justify-center">
         <Header />
       </section>
 

@@ -22,7 +22,7 @@ function CaseStudies({ data }: data) {
         initial={{ opacity: 0 }}
         transition={{ duration: 2 }}
         whileInView={{ opacity: 1 }}
-        className="relative z-20 flex h-screen w-full snap-x snap-mandatory overflow-y-hidden overflow-x-scroll scrollbar scrollbar-track-gray-400/20 scrollbar-thumb-red-50/70"
+        className="relative flex h-screen w-full snap-x snap-mandatory overflow-y-hidden overflow-x-scroll scrollbar scrollbar-track-gray-400/20 scrollbar-thumb-red-50/70"
       >
         {projects.map((project, i) => (
           <div key={i} id={`${project.name}`}>
