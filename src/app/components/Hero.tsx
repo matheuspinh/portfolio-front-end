@@ -2,13 +2,17 @@
 
 import React from 'react'
 import { useTypewriter, Cursor } from 'react-simple-typewriter'
-import HeroHead from '../assets/cropped.jpg'
 import Image from 'next/image'
 import BackgroundCirclesAnimation from './BackgroundCirclesAnimation'
 import Link from 'next/link'
 import { motion } from 'framer-motion'
+import { PageInfo } from '../types/page-info'
 
-function Hero() {
+type data = {
+  data: PageInfo
+}
+
+function Hero({ data }: data) {
   const [mainText] = useTypewriter({
     words: [
       "I'm Matheus Pinheiro",
@@ -40,7 +44,7 @@ function Hero() {
       <Image
         width={160}
         height={160}
-        src={HeroHead}
+        src={`${data.heroPicture.url}`}
         alt="avatar"
         className="relative mx-auto aspect-square h-32 w-32 rounded-full object-cover"
       />

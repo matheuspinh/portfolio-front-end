@@ -3,10 +3,14 @@
 import React from 'react'
 import Image from 'next/image'
 import { motion } from 'framer-motion'
-import DinDinImage from '../assets/Screenshot from 2023-06-20 09-46-42.png'
+import { PageInfo } from '../types/page-info'
 
-function CaseStudies() {
-  const projects = [1, 2, 3, 4, 5]
+type data = {
+  data: PageInfo
+}
+
+function CaseStudies({ data }: data) {
+  const projects = data.projects
 
   return (
     <div className="relative mx-auto flex h-screen max-w-full snap-center flex-col items-center justify-evenly text-left md:flex-row">
@@ -20,8 +24,8 @@ function CaseStudies() {
         whileInView={{ opacity: 1 }}
         className="relative z-20 flex h-screen w-full snap-x snap-mandatory overflow-y-hidden overflow-x-scroll scrollbar scrollbar-track-gray-400/20 scrollbar-thumb-red-50/70"
       >
-        {projects.map((project) => (
-          <div key={project} id={`${project}`}>
+        {projects.map((project, i) => (
+          <div key={i} id={`${project.name}`}>
             <div className="flex h-screen w-screen flex-shrink-0 snap-center flex-col items-center justify-center space-y-5 md:p-44">
               <motion.div
                 initial={{
@@ -36,7 +40,13 @@ function CaseStudies() {
                 viewport={{ once: true }}
                 className="w-72 rounded-lg object-cover p-4 md:w-[540px]"
               >
-                <Image className="" width={540} src={DinDinImage} alt="image" />
+                <Image
+                  className=""
+                  height={280}
+                  width={540}
+                  src={`${project.projectPic.url}`}
+                  alt="image"
+                />
               </motion.div>
 
               <motion.div
@@ -53,15 +63,10 @@ function CaseStudies() {
                 className="w-screen p-4 md:max-w-[1000px]"
               >
                 <h4 className="text-lg text-red-50">
-                  Estudo de caso {project} de {projects.length}: DinDin
+                  Estudo de caso {i + 1} de {projects.length}: {project.name}
                 </h4>
                 <p className="overflow-y-auto text-justify text-gray-100">
-                  Lorem ipsum dolor sit amet consectetur, adipisicing elit. Et
-                  excepturi vel ratione quis ex tempore, doloribus dolorem ipsum
-                  velit ipsam modi cupiditate eum aliquam vero dolorum
-                  consequuntur, natus, quae eligendi sapiente! Illum quos, natus
-                  amet distinctio consequuntur quam iste, unde nulla dolorum
-                  aspernatur molestiae accusantium.
+                  {project.summary}
                 </p>
               </motion.div>
             </div>

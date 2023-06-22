@@ -2,7 +2,8 @@
 
 import React from 'react'
 import { motion } from 'framer-motion'
-import Tech from './Tech'
+import TechPin from './TechPin'
+import { PageInfo } from '../types/page-info'
 
 const container = {
   hidden: { opacity: 1, scale: 0 },
@@ -24,25 +25,13 @@ const techItem = {
   },
 }
 
-const skillz = [
-  'Javascript',
-  'HTML',
-  'CSS',
-  'Python',
-  'Sass',
-  'ReactJS',
-  'Django',
-  'NodeJS',
-  'Javascript1',
-  'HTML2',
-  'CSS3',
-  'Python4',
-  'Sass5',
-  'ReactJS6',
-  'Django7',
-]
+type data = {
+  data: PageInfo
+}
 
-function Technologies() {
+function Technologies({ data }: data) {
+  const techs = data.technologies
+
   return (
     <div className="xl: relative mt-2 flex min-h-screen flex-col items-center justify-center text-center md:flex-row md:text-left xl:px-10">
       <h1 className="absolute top-10 mr-[-20px] text-center text-2xl uppercase tracking-[20px] text-gray-400">
@@ -54,9 +43,9 @@ function Technologies() {
         whileInView="visible"
         className="grid grid-cols-4 gap-5"
       >
-        {skillz.map((skill, i) => (
+        {techs.map((tech, i) => (
           <motion.div variants={techItem} key={i}>
-            <Tech />
+            <TechPin data={tech} />
           </motion.div>
         ))}
       </motion.div>
