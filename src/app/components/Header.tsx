@@ -27,7 +27,10 @@ function Header() {
             url="https://wa.me/5521991438304"
           />
         </Link>
-        <Link href="https://wa.me/5521991438304" className="cursor-pointer">
+        <Link
+          href="https://mail.google.com/mail/u/0/?fs=1&to=matheus.rj.pinheiro@gmail.com&tf=cm"
+          className="cursor-pointer"
+        >
           <p className="hidden uppercase md:inline-flex">
             Ou se preferir um E-mail
           </p>
