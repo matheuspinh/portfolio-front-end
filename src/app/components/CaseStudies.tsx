@@ -60,7 +60,7 @@ function CaseStudies({ data }: data) {
                   y: 0,
                 }}
                 viewport={{ once: true }}
-                className="w-screen p-4 md:max-w-[1000px]"
+                className="max-h-60 w-screen overflow-y-scroll p-4 scrollbar-none md:max-h-full md:max-w-[1000px]"
               >
                 <h4 className="text-lg text-red-50">
                   Estudo de caso {i + 1} de {projects.length}: {project.name}
