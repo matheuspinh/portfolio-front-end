@@ -8,7 +8,7 @@ import { fetchHygraphQuery } from './utils/fetch-hygraph-query'
 const getPageData = async (): Promise<PageData> => {
   const query = `query Pageinfos {
     pageinfo(where: {slug: "home"}) {
-      technologies {
+      technologies(first:20) {
         name
         techIcon{url}
       }
