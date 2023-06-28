@@ -31,6 +31,8 @@ const getPageData = async (): Promise<PageData> => {
 export default async function Home() {
   const { pageinfo: data } = await getPageData()
 
+  console.log(data)
+
   return (
     <main className="h-screen snap-y snap-mandatory overflow-x-hidden font-sans scrollbar scrollbar-track-gray-400/20 scrollbar-thumb-red-50/70">
       <section className="sticky top-0 z-20 flex w-screen justify-center">
